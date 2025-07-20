@@ -33,20 +33,23 @@ A comprehensive vault of notes and code snippets on SQL technologies—from raw 
 Each folder is organized by technology or topic:
 
 db-notes-vault/
-├── sql/
-│ ├── basics.md
-│ └── joins.md
-├── sqlalchemy/
-│ ├── core.md
-│ └── orm.md
-├── alembic/
-│ └── migrations.md
-├── mongodb/
-│ ├── pymongo.md
-│ └── odm_examples.md
-└── extras/
-└── cheat_sheets.md
-
+├── sql/ # Core SQL concepts and syntax
+│ ├── basics.md # SELECT, INSERT, UPDATE, DELETE, etc.
+│ └── joins.md # INNER, OUTER, LEFT, RIGHT JOINs
+│
+├── sqlalchemy/ # SQLAlchemy Core and ORM patterns
+│ ├── core.md # Table definitions and Core expressions
+│ └── orm.md # ORM models, queries, and relationships
+│
+├── alembic/ # Alembic migrations
+│ └── migrations.md # Autogeneration, upgrading/downgrading
+│
+├── mongodb/ # NoSQL MongoDB & ODMs
+│ ├── pymongo.md # Direct usage of PyMongo
+│ └── odm_examples.md # MongoEngine, Motor, etc.
+│
+└── extras/ # Quick references and best practices
+└── cheat_sheets.md # Syntax and command summaries
 
 
 ## 🛠️ How to Use
