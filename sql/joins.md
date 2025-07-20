@@ -1,0 +1,3 @@
+# SQL Joins
+
+INNER, OUTER, LEFT, RIGHT JOINs

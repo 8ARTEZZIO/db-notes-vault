@@ -1,0 +1,3 @@
+# SQL Basics
+
+SELECT, INSERT, UPDATE, DELETE, etc.
