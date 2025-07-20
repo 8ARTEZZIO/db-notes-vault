@@ -32,6 +32,7 @@ A comprehensive vault of notes and code snippets on SQL technologies—from raw 
 
 Each folder is organized by technology or topic:
 
+```
 db-notes-vault/
 ├── sql/ # Core SQL concepts and syntax
 │ ├── basics.md # SELECT, INSERT, UPDATE, DELETE, etc.
@@ -50,6 +51,7 @@ db-notes-vault/
 │
 └── extras/ # Quick references and best practices
 └── cheat_sheets.md # Syntax and command summaries
+```
 
 
 ## 🛠️ How to Use
