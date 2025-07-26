@@ -95,3 +95,81 @@ With filters:
 stmt = select(users).where(users.c.username == "bart")
 ```
 
+---
+
+## 7. Update Data
+
+```python
+from sqlalchemy import update
+
+stmt = update(users).where(users.c.username == "bart").values(email="bart_new@example.com")
+with engine.connect() as conn:
+    conn.execute(stmt)
+    conn.commit()
+```
+
+---
+
+## 8. Delete Data
+
+```python
+from sqlalchemy import delete
+
+stmt = delete(users).where(users.c.username == "john")
+with engine.connect() as conn:
+    conn.execute(stmt)
+    conn.commit()
+```
+
+---
+
+## 9. Transactions
+
+```python
+with engine.begin() as conn:
+    conn.execute(insert(users).values(username="sam", email="sam@example.com"))
+    conn.execute(insert(users).values(username="max", email="max@example.com"))
+    # auto-committed on exit
+```
+
+---
+
+## 10. Raw SQL Execution
+
+```python
+with engine.connect() as conn:
+    result = conn.execute("SELECT * FROM users;")
+    for row in result:
+        print(row)
+```
+
+---
+
+## 11. SQLAlchemy Core vs ORM
+
+|Feature | Core | ORM|
+|-----|-------|---------|
+|Abstraction | SQL-focused | Python object-focused|
+|Use Case | Data pipelines, scripts | Web apps, complex relations|
+|Speed | Slightly faster (less overhead) | More convenient, but slower|
+
+---
+
+## 12. Best Practices
+
+<ul>
+    <li>Use metadata.create_all() once per app to ensure tables exist.</li>
+    <li>Use context managers (with engine.connect()) to avoid connection leaks. </li>
+    <li>Use transactions when modifying data.</li>
+    <li>Keep SQLAlchemy Core for performance-heavy or SQL-centric apps.</li>
+</ul>
+
+---
+
+## 13. Next Steps
+
+<ul>
+    <li>Explore <code>and_</code> / <code>or_</code> for complex <code>WHERE</code> clauses.</li>
+    <li>Learn <code>join()</code> for multi-table queries.</li>
+    <li>Practice creating <strong>indexes and constraints.</strong></li>
+</ul>
