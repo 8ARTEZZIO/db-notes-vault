@@ -139,3 +139,26 @@ order.save()
 |<code>Product.objects().limit(5)</code>|Limit results|
 
 ---
+
+## MongoDB Compass (Optional GUI)
+<ul>
+    <li>
+        Download: https://www.mongodb.com/try/download/compass
+        </li>
+    <li>
+        Allows you to view, browse, and debug your MongoDB collections visually
+    </li>
+</ul>
+
+---
+
+## Summary
+
+|**Concept**|**MongoDB ODM Equivalent**|
+|-|-|
+|Table|Collection|
+|Row|Document|
+|Column|Field|
+|Primary Key|<code>_id</code> (auto-assigned)|
+|Foreign Key|<code>ReferenceField</code>|
+|Relationships|Reference/List of References|
