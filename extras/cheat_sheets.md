@@ -139,3 +139,7 @@ session.commit()
 ## Tips
 
 - MongoDB collections are auto-created on insert.
+- PyMongo is fast and gives low-level control.
+- SQLAlchemy ORM adds structure, and `Flask-Migrate` is great for production migrations.
+- MongoEngine simplifies MongoDB for Python, but don't abuse document size.
+- Always sanitize user inputs!
